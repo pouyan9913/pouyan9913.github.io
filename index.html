@@ -4,49 +4,715 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>صفحه شخصی من</title>
+    <title>رزومه پویان علیزاده | Software Engineer</title>
 
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #172033;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --background: #f1f5f9;
+            --card: #ffffff;
+        }
+
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
+            background: var(--background);
+            color: var(--text);
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 1.85;
         }
+
+        /* =========================
+           Toolbar
+        ========================= */
+
+        .toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px;
+            background: rgba(241, 245, 249, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .btn {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* =========================
+           Resume
+        ========================= */
 
         .container {
-            max-width: 900px;
-            margin: 100px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 20px;
+            width: min(100% - 28px, 1000px);
+            margin: 30px auto 60px;
+        }
+
+        .resume {
+            background: var(--card);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        .header {
+            padding: 45px 50px 35px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff 0%,
+                    #ffffff 70%
+                );
+            border-bottom: 1px solid var(--border);
+        }
+
+        .name {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .job-title {
+            margin: 5px 0 18px;
+            color: var(--primary);
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .summary {
+            max-width: 850px;
+            margin: 0;
+            color: #475569;
+            font-size: 15px;
+        }
+
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .contacts span {
+            white-space: nowrap;
+        }
+
+        /* =========================
+           Main
+        ========================= */
+
+        .content {
+            padding: 35px 50px 45px;
+        }
+
+        .section {
+            margin-bottom: 34px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 20px;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 5px;
+            height: 26px;
+            border-radius: 5px;
+            background: var(--primary);
+        }
+
+        /* =========================
+           Experience
+        ========================= */
+
+        .experience {
+            margin-bottom: 24px;
+        }
+
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .experience-title {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .company {
+            color: var(--primary);
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .experience ul {
+            margin: 10px 0 0;
+            padding-right: 22px;
+        }
+
+        .experience li {
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           Skills
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .skill {
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            color: #1e40af;
+            font-size: 13px;
+        }
+
+        /* =========================
+           Projects
+        ========================= */
+
+        .project {
+            padding: 16px 18px;
+            margin-bottom: 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            margin-bottom: 4px;
+            font-weight: 800;
+        }
+
+        .project-description {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        /* =========================
+           Education
+        ========================= */
+
+        .education {
+            padding: 16px 18px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .education-title {
+            font-weight: 800;
+        }
+
+        .education-info {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        .footer {
+            padding: 0 50px 30px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            color: var(--muted);
+            font-size: 12px;
         }
 
-        h1 {
-            margin-bottom: 15px;
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .resume {
+                border-radius: 0;
+            }
+
+            .header,
+            .content {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .footer {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .name {
+                font-size: 30px;
+            }
+
+            .job-title {
+                font-size: 18px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .date {
+                white-space: normal;
+            }
         }
 
-        p {
-            color: #666;
-            font-size: 18px;
+        /* =========================
+           PDF / Print
+        ========================= */
+
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .resume {
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .header {
+                padding: 20px 25px 20px;
+                background: white;
+            }
+
+            .content {
+                padding: 20px 25px 25px;
+            }
+
+            .footer {
+                padding: 0 25px 10px;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+
+            .experience,
+            .project,
+            .education {
+                break-inside: avoid;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>سلام 👋</h1>
+    <!-- =========================
+         PDF Button
+    ========================== -->
 
-        <p>
-            این اولین صفحه GitHub Pages من است.
-        </p>
+    <div class="toolbar">
+
+        <button
+            class="btn btn-primary"
+            onclick="window.print()">
+            📄 دریافت PDF
+        </button>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="resume">
+
+
+            <!-- =========================
+                 Header
+            ========================== -->
+
+            <header class="header">
+
+                <h1 class="name">
+                    پویان علیزاده
+                </h1>
+
+                <div class="job-title">
+                    Software Engineer | .NET Backend Developer
+                </div>
+
+                <p class="summary">
+
+                    برنامه‌نویس نرم‌افزار با حدود ۲ سال تجربه حرفه‌ای در
+                    توسعه Backend و سامانه‌های سازمانی. دارای تجربه در
+                    توسعه سرویس‌های مبتنی بر ASP.NET Core و .NET،
+                    طراحی REST API، کار با SQL Server و Entity Framework Core،
+                    معماری Clean Architecture، پردازش‌های پس‌زمینه،
+                    Redis، Docker و توسعه رابط‌های وب با Blazor.
+
+                </p>
+
+
+                <div class="contacts">
+
+                    <span>
+                        📍 ایران
+                    </span>
+
+                    <span>
+                        📧 ایمیل: YOUR_EMAIL@example.com
+                    </span>
+
+                    <span>
+                        📱 موبایل: YOUR_PHONE
+                    </span>
+
+                    <span>
+                        🔗 GitHub: github.com/YOUR_USERNAME
+                    </span>
+
+                    <span>
+                        💼 LinkedIn: linkedin.com/in/YOUR_USERNAME
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 Content
+            ========================== -->
+
+            <main class="content">
+
+
+                <!-- Experience -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        تجربه کاری
+                    </h2>
+
+
+                    <div class="experience">
+
+                        <div class="experience-header">
+
+                            <h3 class="experience-title">
+
+                                Software Engineer —
+                                <span class="company">
+                                    Ghasem Iran
+                                </span>
+
+                            </h3>
+
+                            <span class="date">
+                                حدود ۲ سال
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                توسعه و نگهداری سرویس‌های Backend
+                                با ASP.NET Core و .NET.
+                            </li>
+
+                            <li>
+                                طراحی و پیاده‌سازی REST API و منطق کسب‌وکار
+                                با استفاده از Clean Architecture.
+                            </li>
+
+                            <li>
+                                طراحی و بهینه‌سازی Query، Stored Procedure،
+                                View و Index در SQL Server.
+                            </li>
+
+                            <li>
+                                توسعه Integration و ارتباط با سامانه‌های
+                                سازمانی و سرویس‌های خارجی.
+                            </li>
+
+                            <li>
+                                پیاده‌سازی پردازش‌های پس‌زمینه و
+                                Jobهای زمان‌بندی‌شده با Hangfire.
+                            </li>
+
+                            <li>
+                                استفاده از Redis برای Cache و
+                                مدیریت فرآیندهای سرویس‌ها.
+                            </li>
+
+                            <li>
+                                کانتینری‌سازی سرویس‌ها با Docker و
+                                Docker Compose و کار با محیط Linux.
+                            </li>
+
+                            <li>
+                                توسعه رابط‌های کاربری با Blazor WASM
+                                و Ant Design Blazor.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Skills -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        مهارت‌های فنی
+                    </h2>
+
+
+                    <div class="skills">
+
+                        <span class="skill">C#</span>
+                        <span class="skill">.NET 8 / .NET 9</span>
+                        <span class="skill">ASP.NET Core</span>
+                        <span class="skill">Entity Framework Core</span>
+                        <span class="skill">REST API</span>
+                        <span class="skill">Clean Architecture</span>
+                        <span class="skill">SQL Server</span>
+                        <span class="skill">T-SQL</span>
+                        <span class="skill">Stored Procedures</span>
+                        <span class="skill">Redis</span>
+                        <span class="skill">Hangfire</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">Docker Compose</span>
+                        <span class="skill">Blazor WASM</span>
+                        <span class="skill">Ant Design Blazor</span>
+                        <span class="skill">OpenLayers</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">Linux</span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Projects -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        پروژه‌ها و فعالیت‌های فنی
+                    </h2>
+
+
+                    <div class="project">
+
+                        <div class="project-title">
+                            یکپارچه‌سازی سامانه تجارت
+                        </div>
+
+                        <div class="project-description">
+
+                            توسعه سرویس‌های دریافت، پردازش و ارسال اطلاعات
+                            به سامانه تجارت، مدیریت وضعیت اسناد،
+                            پردازش اطلاعات محصولات و مشتریان و ایجاد
+                            گزارش‌های مربوط به مغایرت و ارسال.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-title">
+                            سامانه نقشه و GPS
+                        </div>
+
+                        <div class="project-description">
+
+                            توسعه Backend و رابط کاربری نقشه با استفاده
+                            از OpenLayers، Tile Server و PMTiles و
+                            استقرار سرویس‌ها با Docker و Nginx.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-title">
+                            Background Processing & Integration
+                        </div>
+
+                        <div class="project-description">
+
+                            طراحی Jobهای زمان‌بندی‌شده، مدیریت وضعیت
+                            پردازش‌ها، ثبت Log و استفاده از Redis و
+                            Hangfire برای اجرای فرآیندهای دوره‌ای.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-title">
+                            SQL Server & Data Optimization
+                        </div>
+
+                        <div class="project-description">
+
+                            طراحی Stored Procedure و View، بهینه‌سازی
+                            Queryهای سنگین، طراحی Index، مدیریت تراکنش‌ها
+                            و کار با حجم بالای داده‌های عملیاتی.
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Education -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        تحصیلات
+                    </h2>
+
+                    <div class="education">
+
+                        <div class="education-title">
+                            اطلاعات تحصیلات
+                        </div>
+
+                        <div class="education-info">
+                            رشته و دانشگاه را اینجا وارد کنید
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Languages -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        زبان‌ها
+                    </h2>
+
+                    <p>
+                        فارسی — زبان مادری
+                        <br>
+                        انگلیسی — سطح زبان را وارد کنید
+                    </p>
+
+                </section>
+
+
+            </main>
+
+
+            <footer class="footer">
+
+                آخرین بروزرسانی رزومه — ۱۴۰۵
+
+            </footer>
+
+        </div>
+
     </div>
 
 </body>
