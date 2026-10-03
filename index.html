@@ -4,337 +4,627 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>رزومه پویان علیزاده | Software Engineer</title>
+    <title>پویان علیزاده | Software Engineer</title>
+
+    <meta
+        name="description"
+        content="رزومه پویان علیزاده، مهندس نرم افزار و .NET Backend Developer"
+    >
 
     <style>
+
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
+
             --text: #172033;
+            --text-light: #475569;
             --muted: #64748b;
+
             --border: #e2e8f0;
-            --background: #f1f5f9;
-            --card: #ffffff;
+
+            --background: #eef2f7;
+            --surface: #ffffff;
+
+            --skill-background: #eff6ff;
+            --skill-text: #1d4ed8;
         }
+
 
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             margin: 0;
+
             background: var(--background);
+
             color: var(--text);
-            font-family: Tahoma, Arial, sans-serif;
-            line-height: 1.85;
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            line-height: 1.8;
         }
 
-        /* =========================
-           Toolbar
-        ========================= */
+
+        /* =========================================
+           TOP TOOLBAR
+        ========================================= */
 
         .toolbar {
             position: sticky;
+
             top: 0;
+
             z-index: 100;
+
             display: flex;
+
             justify-content: center;
+
             gap: 10px;
+
             padding: 14px;
-            background: rgba(241, 245, 249, 0.92);
-            backdrop-filter: blur(10px);
+
+            background: rgba(238, 242, 247, 0.92);
+
+            backdrop-filter: blur(12px);
+
             border-bottom: 1px solid var(--border);
         }
 
-        .btn {
+
+        .toolbar button {
             border: none;
+
             border-radius: 10px;
+
             padding: 10px 20px;
+
             font-family: inherit;
+
             font-size: 14px;
+
             cursor: pointer;
+
             transition: 0.2s;
         }
 
-        .btn-primary {
+
+        .pdf-button {
             background: var(--primary);
+
             color: white;
         }
 
-        .btn-primary:hover {
+
+        .pdf-button:hover {
             background: var(--primary-dark);
+
+            transform: translateY(-1px);
         }
 
-        /* =========================
-           Resume
-        ========================= */
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
 
         .container {
-            width: min(100% - 28px, 1000px);
+            width: min(
+                calc(100% - 28px),
+                1050px
+            );
+
             margin: 30px auto 60px;
         }
 
+
         .resume {
-            background: var(--card);
-            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+
+            background: var(--surface);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 60px
+                rgba(15, 23, 42, 0.10);
         }
 
-        /* =========================
-           Header
-        ========================= */
+
+        /* =========================================
+           HEADER
+        ========================================= */
 
         .header {
-            padding: 45px 50px 35px;
+            position: relative;
+
+            padding: 48px 55px 40px;
+
             background:
                 linear-gradient(
                     135deg,
                     #eff6ff 0%,
-                    #ffffff 70%
+                    #ffffff 75%
                 );
+
             border-bottom: 1px solid var(--border);
         }
 
-        .name {
-            margin: 0;
-            font-size: 40px;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
 
-        .job-title {
-            margin: 5px 0 18px;
-            color: var(--primary);
-            font-size: 21px;
-            font-weight: 700;
-        }
-
-        .summary {
-            max-width: 850px;
-            margin: 0;
-            color: #475569;
-            font-size: 15px;
-        }
-
-        .contacts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 18px;
-            margin-top: 22px;
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        .contacts span {
-            white-space: nowrap;
-        }
-
-        /* =========================
-           Main
-        ========================= */
-
-        .content {
-            padding: 35px 50px 45px;
-        }
-
-        .section {
-            margin-bottom: 34px;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 0 0 20px;
-            font-size: 21px;
-            font-weight: 800;
-        }
-
-        .section-title::before {
+        .header::before {
             content: "";
-            width: 5px;
-            height: 26px;
-            border-radius: 5px;
+
+            position: absolute;
+
+            top: 0;
+
+            right: 0;
+
+            width: 100%;
+
+            height: 4px;
+
             background: var(--primary);
         }
 
-        /* =========================
-           Experience
-        ========================= */
 
-        .experience {
-            margin-bottom: 24px;
+        .name {
+            margin: 0;
+
+            font-size: 42px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
         }
 
-        .experience:last-child {
+
+        .job-title {
+            margin-top: 5px;
+
+            color: var(--primary);
+
+            font-size: 21px;
+
+            font-weight: 700;
+        }
+
+
+        .summary {
+            max-width: 900px;
+
+            margin: 18px 0 0;
+
+            color: var(--text-light);
+
+            font-size: 15px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contacts {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 9px 20px;
+
+            margin-top: 22px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        .contacts a {
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        .contacts a:hover {
+            color: var(--primary);
+        }
+
+
+        /* =========================================
+           CONTENT
+        ========================================= */
+
+        .content {
+            padding: 38px 55px 45px;
+        }
+
+
+        .section {
+            margin-bottom: 38px;
+        }
+
+
+        .section:last-child {
             margin-bottom: 0;
         }
 
+
+        .section-title {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 0 0 22px;
+
+            font-size: 21px;
+
+            font-weight: 900;
+        }
+
+
+        .section-title::before {
+            content: "";
+
+            width: 5px;
+
+            height: 27px;
+
+            border-radius: 5px;
+
+            background: var(--primary);
+        }
+
+
+        /* =========================================
+           EXPERIENCE
+        ========================================= */
+
+        .experience {
+            position: relative;
+
+            margin-bottom: 28px;
+
+            padding-right: 20px;
+        }
+
+
+        .experience::before {
+            content: "";
+
+            position: absolute;
+
+            right: 0;
+
+            top: 6px;
+
+            width: 2px;
+
+            height: calc(100% - 10px);
+
+            background: #dbeafe;
+        }
+
+
+        .experience::after {
+            content: "";
+
+            position: absolute;
+
+            right: -4px;
+
+            top: 5px;
+
+            width: 10px;
+
+            height: 10px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+        }
+
+
         .experience-header {
             display: flex;
+
             justify-content: space-between;
+
             align-items: flex-start;
+
             gap: 20px;
         }
 
+
         .experience-title {
             margin: 0;
+
             font-size: 17px;
-            font-weight: 800;
+
+            font-weight: 900;
         }
+
 
         .company {
             color: var(--primary);
         }
 
+
         .date {
             color: var(--muted);
+
             font-size: 13px;
+
             white-space: nowrap;
         }
 
+
         .experience ul {
             margin: 10px 0 0;
-            padding-right: 22px;
+
+            padding-right: 20px;
+
+            color: var(--text-light);
+
+            font-size: 14px;
         }
+
 
         .experience li {
             margin-bottom: 5px;
         }
 
-        /* =========================
-           Skills
-        ========================= */
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skill-category {
+            margin-bottom: 18px;
+        }
+
+
+        .skill-category:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .skill-category-title {
+            margin-bottom: 9px;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
 
         .skills {
             display: flex;
+
             flex-wrap: wrap;
-            gap: 9px;
+
+            gap: 8px;
         }
+
 
         .skill {
             padding: 6px 12px;
-            border-radius: 999px;
-            background: #eff6ff;
+
+            background: var(--skill-background);
+
+            color: var(--skill-text);
+
             border: 1px solid #dbeafe;
-            color: #1e40af;
-            font-size: 13px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+
+            font-weight: 600;
         }
 
-        /* =========================
-           Projects
-        ========================= */
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
 
         .project {
-            padding: 16px 18px;
+            padding: 17px 19px;
+
             margin-bottom: 12px;
+
             background: #f8fafc;
+
             border: 1px solid var(--border);
+
             border-radius: 12px;
         }
+
 
         .project:last-child {
             margin-bottom: 0;
         }
 
+
         .project-title {
-            margin-bottom: 4px;
-            font-weight: 800;
+            margin-bottom: 5px;
+
+            font-size: 15px;
+
+            font-weight: 900;
         }
+
 
         .project-description {
-            color: #475569;
-            font-size: 14px;
+            color: var(--text-light);
+
+            font-size: 13px;
         }
 
-        /* =========================
-           Education
-        ========================= */
 
-        .education {
-            padding: 16px 18px;
+        /* =========================================
+           TWO COLUMNS
+        ========================================= */
+
+        .two-columns {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .info-box {
+            padding: 18px;
+
             background: #f8fafc;
+
             border: 1px solid var(--border);
+
             border-radius: 12px;
         }
 
-        .education-title {
-            font-weight: 800;
+
+        .info-title {
+            margin-bottom: 5px;
+
+            font-weight: 900;
         }
 
-        .education-info {
-            color: var(--muted);
+
+        .info-value {
+            color: var(--text-light);
+
             font-size: 14px;
         }
 
-        /* =========================
-           Footer
-        ========================= */
 
-        .footer {
-            padding: 0 50px 30px;
-            text-align: center;
-            color: var(--muted);
-            font-size: 12px;
+        /* =========================================
+           SOFT SKILLS
+        ========================================= */
+
+        .soft-skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 8px 25px;
+
+            color: var(--text-light);
+
+            font-size: 14px;
         }
 
-        /* =========================
-           Mobile
-        ========================= */
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+            padding: 0 55px 30px;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
 
         @media (max-width: 700px) {
 
             .container {
                 width: 100%;
+
                 margin: 0;
             }
 
+
             .resume {
                 border-radius: 0;
+
+                box-shadow: none;
             }
+
 
             .header,
             .content {
                 padding-left: 22px;
+
                 padding-right: 22px;
             }
+
 
             .footer {
                 padding-left: 22px;
+
                 padding-right: 22px;
             }
 
+
             .name {
-                font-size: 30px;
+                font-size: 31px;
             }
+
 
             .job-title {
                 font-size: 18px;
             }
 
+
             .experience-header {
                 flex-direction: column;
+
                 gap: 2px;
             }
+
 
             .date {
                 white-space: normal;
             }
+
+
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+
+            .soft-skills {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* =========================
-           PDF / Print
-        ========================= */
+
+        /* =========================================
+           PRINT / PDF
+        ========================================= */
 
         @page {
             size: A4;
+
             margin: 10mm;
         }
+
 
         @media print {
 
@@ -342,63 +632,82 @@
                 background: white;
             }
 
+
             .toolbar {
                 display: none !important;
             }
 
+
             .container {
                 width: 100%;
+
                 margin: 0;
             }
 
+
             .resume {
                 border-radius: 0;
+
                 box-shadow: none;
             }
 
+
             .header {
-                padding: 20px 25px 20px;
+                padding: 22px 28px 20px;
+
                 background: white;
             }
 
+
             .content {
-                padding: 20px 25px 25px;
+                padding: 22px 28px 25px;
             }
 
+
             .footer {
-                padding: 0 25px 10px;
+                padding: 0 28px 10px;
             }
+
 
             .section {
                 break-inside: avoid;
             }
 
+
             .experience,
             .project,
-            .education {
+            .info-box {
                 break-inside: avoid;
             }
 
+
             a {
                 color: inherit;
+
                 text-decoration: none;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         PDF Button
-    ========================== -->
+
+    <!-- =========================================
+         PDF TOOLBAR
+    ========================================== -->
 
     <div class="toolbar">
 
         <button
-            class="btn btn-primary"
+            class="pdf-button"
             onclick="window.print()">
+
             📄 دریافت PDF
+
         </button>
 
     </div>
@@ -406,12 +715,12 @@
 
     <div class="container">
 
-        <div class="resume">
+        <article class="resume">
 
 
-            <!-- =========================
-                 Header
-            ========================== -->
+            <!-- =========================================
+                 HEADER
+            ========================================== -->
 
             <header class="header">
 
@@ -419,18 +728,23 @@
                     پویان علیزاده
                 </h1>
 
+
                 <div class="job-title">
                     Software Engineer | .NET Backend Developer
                 </div>
 
+
                 <p class="summary">
 
-                    برنامه‌نویس نرم‌افزار با حدود ۲ سال تجربه حرفه‌ای در
-                    توسعه Backend و سامانه‌های سازمانی. دارای تجربه در
-                    توسعه سرویس‌های مبتنی بر ASP.NET Core و .NET،
-                    طراحی REST API، کار با SQL Server و Entity Framework Core،
-                    معماری Clean Architecture، پردازش‌های پس‌زمینه،
-                    Redis، Docker و توسعه رابط‌های وب با Blazor.
+                    مهندس نرم‌افزار با تجربه توسعه و نگهداری
+                    نرم‌افزارهای تجاری، مالی و سازمانی.
+                    دارای تجربه عملی در توسعه Backend با C# و
+                    ASP.NET Core، طراحی API، کار با SQL Server و
+                    Entity Framework Core و پیاده‌سازی معماری
+                    Clean Architecture. همچنین دارای تجربه در
+                    توسعه ERP، پردازش‌های پس‌زمینه، داشبوردهای
+                    مدیریتی، سیستم‌های نقشه و یکپارچه‌سازی
+                    سامانه‌های سازمانی.
 
                 </p>
 
@@ -438,23 +752,34 @@
                 <div class="contacts">
 
                     <span>
-                        📍 ایران
+                        📍 تهران
                     </span>
 
-                    <span>
-                        📧 ایمیل: YOUR_EMAIL@example.com
-                    </span>
 
                     <span>
-                        📱 موبایل: YOUR_PHONE
+                        📱
+                        <a href="tel:09367801262">
+                            09367801262
+                        </a>
                     </span>
 
-                    <span>
-                        🔗 GitHub: github.com/YOUR_USERNAME
-                    </span>
 
                     <span>
-                        💼 LinkedIn: linkedin.com/in/YOUR_USERNAME
+                        📧
+                        <a href="mailto:pouyan9913@gmail.com">
+                            pouyan9913@gmail.com
+                        </a>
+                    </span>
+
+
+                    <span>
+                        🔗
+                        <a
+                            href="https://github.com/pouyan9913"
+                            target="_blank"
+                        >
+                            github.com/pouyan9913
+                        </a>
                     </span>
 
                 </div>
@@ -462,14 +787,14 @@
             </header>
 
 
-            <!-- =========================
-                 Content
-            ========================== -->
+            <!-- =========================================
+                 MAIN CONTENT
+            ========================================== -->
 
             <main class="content">
 
 
-                <!-- Experience -->
+                <!-- EXPERIENCE -->
 
                 <section class="section">
 
@@ -484,15 +809,16 @@
 
                             <h3 class="experience-title">
 
-                                Software Engineer —
+                                برنامه‌نویس —
                                 <span class="company">
-                                    Ghasem Iran
+                                    گروه مینو
                                 </span>
 
                             </h3>
 
+
                             <span class="date">
-                                حدود ۲ سال
+                                08/1403 — تاکنون
                             </span>
 
                         </div>
@@ -501,43 +827,172 @@
                         <ul>
 
                             <li>
-                                توسعه و نگهداری سرویس‌های Backend
-                                با ASP.NET Core و .NET.
+                                توسعه و نگهداری نرم‌افزارهای
+                                تجاری و سازمانی.
                             </li>
 
                             <li>
-                                طراحی و پیاده‌سازی REST API و منطق کسب‌وکار
-                                با استفاده از Clean Architecture.
+                                توسعه Backend با C# و
+                                ASP.NET Core.
                             </li>
 
                             <li>
-                                طراحی و بهینه‌سازی Query، Stored Procedure،
-                                View و Index در SQL Server.
+                                طراحی و توسعه REST API و
+                                منطق کسب‌وکار.
                             </li>
 
                             <li>
-                                توسعه Integration و ارتباط با سامانه‌های
-                                سازمانی و سرویس‌های خارجی.
+                                طراحی و بهینه‌سازی Query،
+                                Stored Procedure، View و Index
+                                در SQL Server.
                             </li>
 
                             <li>
-                                پیاده‌سازی پردازش‌های پس‌زمینه و
-                                Jobهای زمان‌بندی‌شده با Hangfire.
+                                توسعه و نگهداری Integration
+                                با سامانه‌های سازمانی.
                             </li>
 
                             <li>
-                                استفاده از Redis برای Cache و
-                                مدیریت فرآیندهای سرویس‌ها.
+                                پیاده‌سازی Background Job و
+                                پردازش‌های زمان‌بندی‌شده با
+                                Hangfire.
                             </li>
 
                             <li>
-                                کانتینری‌سازی سرویس‌ها با Docker و
-                                Docker Compose و کار با محیط Linux.
+                                توسعه رابط کاربری با
+                                Blazor و JavaScript.
                             </li>
 
                             <li>
-                                توسعه رابط‌های کاربری با Blazor WASM
-                                و Ant Design Blazor.
+                                توسعه و نگهداری سامانه‌های
+                                ERP و فرآیندهای سازمانی.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="experience">
+
+                        <div class="experience-header">
+
+                            <h3 class="experience-title">
+
+                                برنامه‌نویس —
+                                <span class="company">
+                                    شرکت نرم‌افزاری آریا داده
+                                </span>
+
+                            </h3>
+
+
+                            <span class="date">
+                                02/1403 — 08/1403
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                توسعه و نگهداری نرم‌افزارهای
+                                سازمانی.
+                            </li>
+
+                            <li>
+                                برنامه‌نویسی با C# و .NET.
+                            </li>
+
+                            <li>
+                                توسعه API و منطق سمت سرور.
+                            </li>
+
+                            <li>
+                                کار با SQL Server و
+                                T-SQL.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="experience">
+
+                        <div class="experience-header">
+
+                            <h3 class="experience-title">
+
+                                برنامه‌نویس —
+                                <span class="company">
+                                    معارف جنگ شهید صیاد شیرازی
+                                </span>
+
+                            </h3>
+
+
+                            <span class="date">
+                                1401 — 1403
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                توسعه و پشتیبانی نرم‌افزارهای
+                                سازمانی.
+                            </li>
+
+                            <li>
+                                برنامه‌نویسی و رفع خطاهای
+                                نرم‌افزاری.
+                            </li>
+
+                            <li>
+                                توسعه قابلیت‌های جدید و
+                                نگهداری سیستم‌های موجود.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="experience">
+
+                        <div class="experience-header">
+
+                            <h3 class="experience-title">
+
+                                پشتیبانی فنی —
+                                <span class="company">
+                                    مؤسسه خدمات مدیریت و رشد قلم‌چی
+                                </span>
+
+                            </h3>
+
+
+                            <span class="date">
+                                1396 — 1398
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                پشتیبانی فنی نرم‌افزار و
+                                سیستم‌های سازمانی.
+                            </li>
+
+                            <li>
+                                عیب‌یابی مشکلات نرم‌افزاری
+                                و کاربران.
                             </li>
 
                         </ul>
@@ -547,7 +1002,7 @@
                 </section>
 
 
-                <!-- Skills -->
+                <!-- TECHNICAL SKILLS -->
 
                 <section class="section">
 
@@ -556,33 +1011,139 @@
                     </h2>
 
 
-                    <div class="skills">
+                    <div class="skill-category">
 
-                        <span class="skill">C#</span>
-                        <span class="skill">.NET 8 / .NET 9</span>
-                        <span class="skill">ASP.NET Core</span>
-                        <span class="skill">Entity Framework Core</span>
-                        <span class="skill">REST API</span>
-                        <span class="skill">Clean Architecture</span>
-                        <span class="skill">SQL Server</span>
-                        <span class="skill">T-SQL</span>
-                        <span class="skill">Stored Procedures</span>
-                        <span class="skill">Redis</span>
-                        <span class="skill">Hangfire</span>
-                        <span class="skill">Docker</span>
-                        <span class="skill">Docker Compose</span>
-                        <span class="skill">Blazor WASM</span>
-                        <span class="skill">Ant Design Blazor</span>
-                        <span class="skill">OpenLayers</span>
-                        <span class="skill">Git</span>
-                        <span class="skill">Linux</span>
+                        <div class="skill-category-title">
+                            Backend & .NET
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">C#</span>
+                            <span class="skill">.NET</span>
+                            <span class="skill">ASP.NET Core</span>
+                            <span class="skill">Web API</span>
+                            <span class="skill">LINQ</span>
+                            <span class="skill">Entity Framework Core</span>
+                            <span class="skill">Reflection</span>
+                            <span class="skill">Clean Architecture</span>
+                            <span class="skill">ERP</span>
+                            <span class="skill">Parallel Programming</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-category">
+
+                        <div class="skill-category-title">
+                            Database
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">SQL Server</span>
+                            <span class="skill">T-SQL</span>
+                            <span class="skill">Stored Procedure</span>
+                            <span class="skill">Function</span>
+                            <span class="skill">View</span>
+                            <span class="skill">Query Optimization</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-category">
+
+                        <div class="skill-category-title">
+                            Frontend
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">Blazor</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">React</span>
+                            <span class="skill">HTML</span>
+                            <span class="skill">CSS</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-category">
+
+                        <div class="skill-category-title">
+                            Tools & Technologies
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">Git</span>
+                            <span class="skill">Visual Studio</span>
+                            <span class="skill">Hangfire</span>
+                            <span class="skill">Stimulsoft</span>
+                            <span class="skill">Redis</span>
+                            <span class="skill">Docker</span>
+                            <span class="skill">Docker Compose</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-category">
+
+                        <div class="skill-category-title">
+                            Maps & GIS
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">OpenStreetMap</span>
+                            <span class="skill">OpenLayers</span>
+                            <span class="skill">Map Development</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-category">
+
+                        <div class="skill-category-title">
+                            سایر
+                        </div>
+
+                        <div class="skills">
+
+                            <span class="skill">
+                                Software Security
+                            </span>
+
+                            <span class="skill">
+                                Debugging
+                            </span>
+
+                            <span class="skill">
+                                Background Jobs
+                            </span>
+
+                            <span class="skill">
+                                Software Architecture
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </section>
 
 
-                <!-- Projects -->
+                <!-- PROJECTS -->
 
                 <section class="section">
 
@@ -594,15 +1155,15 @@
                     <div class="project">
 
                         <div class="project-title">
-                            یکپارچه‌سازی سامانه تجارت
+                            یکپارچه‌سازی سامانه‌های سازمانی
                         </div>
 
                         <div class="project-description">
 
-                            توسعه سرویس‌های دریافت، پردازش و ارسال اطلاعات
-                            به سامانه تجارت، مدیریت وضعیت اسناد،
-                            پردازش اطلاعات محصولات و مشتریان و ایجاد
-                            گزارش‌های مربوط به مغایرت و ارسال.
+                            طراحی و توسعه سرویس‌های Integration،
+                            دریافت و پردازش اطلاعات، مدیریت وضعیت
+                            اسناد و ایجاد فرآیندهای خودکار برای
+                            تبادل اطلاعات بین سامانه‌های مختلف.
 
                         </div>
 
@@ -612,14 +1173,14 @@
                     <div class="project">
 
                         <div class="project-title">
-                            سامانه نقشه و GPS
+                            توسعه ERP و نرم‌افزارهای تجاری
                         </div>
 
                         <div class="project-description">
 
-                            توسعه Backend و رابط کاربری نقشه با استفاده
-                            از OpenLayers، Tile Server و PMTiles و
-                            استقرار سرویس‌ها با Docker و Nginx.
+                            توسعه قابلیت‌های نرم‌افزارهای سازمانی،
+                            پیاده‌سازی منطق کسب‌وکار، فرآیندهای
+                            اداری و مالی و توسعه APIهای مورد نیاز.
 
                         </div>
 
@@ -629,14 +1190,15 @@
                     <div class="project">
 
                         <div class="project-title">
-                            Background Processing & Integration
+                            سامانه‌های نقشه و GIS
                         </div>
 
                         <div class="project-description">
 
-                            طراحی Jobهای زمان‌بندی‌شده، مدیریت وضعیت
-                            پردازش‌ها، ثبت Log و استفاده از Redis و
-                            Hangfire برای اجرای فرآیندهای دوره‌ای.
+                            تجربه توسعه سیستم‌های مبتنی بر نقشه
+                            با استفاده از OpenStreetMap و OpenLayers
+                            و پیاده‌سازی سرویس‌های مرتبط با
+                            نمایش و پردازش داده‌های مکانی.
 
                         </div>
 
@@ -646,14 +1208,32 @@
                     <div class="project">
 
                         <div class="project-title">
-                            SQL Server & Data Optimization
+                            Background Processing
                         </div>
 
                         <div class="project-description">
 
-                            طراحی Stored Procedure و View، بهینه‌سازی
-                            Queryهای سنگین، طراحی Index، مدیریت تراکنش‌ها
-                            و کار با حجم بالای داده‌های عملیاتی.
+                            طراحی و پیاده‌سازی Jobهای زمان‌بندی‌شده
+                            با Hangfire، پردازش‌های پس‌زمینه،
+                            داشبورد مدیریتی و مدیریت فرآیندهای
+                            دوره‌ای.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-title">
+                            SQL Server & Data Processing
+                        </div>
+
+                        <div class="project-description">
+
+                            طراحی Stored Procedure، Function و View،
+                            بهینه‌سازی Queryها، طراحی Index و
+                            پردازش داده‌های حجیم در SQL Server.
 
                         </div>
 
@@ -662,22 +1242,92 @@
                 </section>
 
 
-                <!-- Education -->
+                <!-- EDUCATION + PERSONAL -->
 
                 <section class="section">
 
                     <h2 class="section-title">
-                        تحصیلات
+                        تحصیلات و اطلاعات تکمیلی
                     </h2>
 
-                    <div class="education">
 
-                        <div class="education-title">
-                            اطلاعات تحصیلات
+                    <div class="two-columns">
+
+
+                        <div class="info-box">
+
+                            <div class="info-title">
+                                کارشناسی مهندسی نرم‌افزار
+                            </div>
+
+                            <div class="info-value">
+
+                                دانشگاه آزاد اسلامی
+                                واحد تهران مرکز
+
+                                <br>
+
+                                1398 — 1400
+
+                            </div>
+
                         </div>
 
-                        <div class="education-info">
-                            رشته و دانشگاه را اینجا وارد کنید
+
+                        <div class="info-box">
+
+                            <div class="info-title">
+                                اطلاعات شخصی
+                            </div>
+
+                            <div class="info-value">
+
+                                سال تولد: 1377
+
+                                <br>
+
+                                وضعیت نظام وظیفه:
+                                پایان خدمت
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- SOFT SKILLS -->
+
+                <section class="section">
+
+                    <h2 class="section-title">
+                        مهارت‌های نرم
+                    </h2>
+
+
+                    <div class="soft-skills">
+
+                        <div>
+                            ✓ روحیه کار تیمی
+                        </div>
+
+                        <div>
+                            ✓ توانایی تحلیل مسئله و ارائه راه‌حل
+                        </div>
+
+                        <div>
+                            ✓ مسئولیت‌پذیری
+                        </div>
+
+                        <div>
+                            ✓ نظم و خلاقیت
+                        </div>
+
+                        <div>
+                            ✓ آشنایی با رفتار سازمانی
                         </div>
 
                     </div>
@@ -685,19 +1335,26 @@
                 </section>
 
 
-                <!-- Languages -->
+                <!-- LANGUAGE -->
 
                 <section class="section">
 
                     <h2 class="section-title">
-                        زبان‌ها
+                        زبان
                     </h2>
 
-                    <p>
-                        فارسی — زبان مادری
-                        <br>
-                        انگلیسی — سطح زبان را وارد کنید
-                    </p>
+
+                    <div class="info-box">
+
+                        <div class="info-title">
+                            انگلیسی
+                        </div>
+
+                        <div class="info-value">
+                            سطح متوسط
+                        </div>
+
+                    </div>
 
                 </section>
 
@@ -707,13 +1364,14 @@
 
             <footer class="footer">
 
-                آخرین بروزرسانی رزومه — ۱۴۰۵
+                آخرین بروزرسانی: ۱۴۰۵
 
             </footer>
 
-        </div>
+        </article>
 
     </div>
+
 
 </body>
 </html>
