@@ -3,108 +3,133 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>پویان علیزاده | Senior Business Process Automation Specialist</title>
+<title>پویان علیزاده | Software Engineer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
 :root{--blue:#3477d3;--text:#20242b;--muted:#707985;--line:#dfe4e9;--soft:#f8fafc;--pill:#f5f9fd}
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fff;color:var(--text);font-family:Vazirmatn,Tahoma,Arial,sans-serif}
-body{font-size:12.5px;line-height:1.6}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--text);font-family:Vazirmatn,Tahoma,Arial,sans-serif}
+body{font-size:12.5px;line-height:1.5}
 .resume{width:210mm;margin:0 auto;background:#fff}
-.page{width:210mm;min-height:297mm;padding:10mm 4mm 9mm;position:relative;overflow:hidden;page-break-after:always}
-.page:last-child{page-break-after:auto}
-.top{display:flex;direction:ltr;align-items:flex-end;justify-content:space-between;border-bottom:3px solid var(--blue);padding:0 0 5px;margin-bottom:10px}
-.top .en-title{font-family:Arial,sans-serif;color:#7d8792;font-size:11px;letter-spacing:.2px;direction:ltr;text-align:left;max-width:55%}
-.top .identity{text-align:right;direction:rtl}
-h1{font-size:24px;line-height:1.15;margin:0 0 3px;font-weight:800}
-.subtitle{font-size:13px;color:var(--blue);font-weight:800;margin:0;line-height:1.35}
-.section{margin-top:8px}
-.section-title{display:flex;align-items:center;justify-content:flex-start;gap:8px;font-size:17px;font-weight:800;margin:0 0 5px;line-height:1.25}
-.section-title:before{content:"";width:4px;height:26px;background:var(--blue);border-radius:1px;display:block;order:2}
+.page{width:210mm;min-height:297mm;padding:8mm 4mm 7mm;position:relative;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+
+.top{display:flex;direction:ltr;align-items:flex-end;justify-content:space-between;border-bottom:2px solid var(--blue);padding:0 0 3px;margin-bottom:7px;gap:10px}
+.top .en-title{font-family:Arial,sans-serif;color:#7d8792;font-size:11px;letter-spacing:.2px;direction:ltr;max-width:56%;text-align:left;line-height:1.4}
+.top .identity{text-align:right;direction:rtl;flex-shrink:0}
+h1{font-size:23px;line-height:1.1;margin:0 0 2px;font-weight:800}
+.subtitle{font-size:12.5px;color:var(--blue);font-weight:800;margin:0;line-height:1.4}
+.bism{text-align:center;color:var(--muted);font-size:11px;margin:0 0 4px}
+
+.section{margin-top:5px}
+.section-title{display:flex;align-items:center;justify-content:flex-start;gap:6px;font-size:16px;font-weight:800;margin:0 0 3px;line-height:1.2}
+.section-title:before{content:"";width:3px;height:19px;background:var(--blue);border-radius:1px;display:block;order:2}
 .section-title span{order:1}
-.intro{border:1px solid var(--line);background:linear-gradient(#fff,#fbfcfd);border-radius:8px;padding:7px 11px;text-align:right;font-size:12px;line-height:1.75;box-shadow:0 1px 2px rgba(0,0,0,.025)}
-.intro ul{margin:4px 0 0;padding:0 16px 0 0}
-.intro li{margin-bottom:3px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px 8px}
-.card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:6px 10px;box-shadow:0 1px 2px rgba(0,0,0,.025)}
-.contact{min-height:42px;text-align:right}
-.contact strong{display:block;font-weight:800;margin-bottom:1px;font-size:12px}
-.contact .value{font-size:12px;color:#3c424a;direction:ltr;text-align:right}
+
+.intro{border:1px solid var(--line);background:linear-gradient(#fff,#fbfcfd);border-radius:7px;padding:5px 10px;text-align:right;font-size:12px;line-height:1.7;box-shadow:0 1px 1px rgba(0,0,0,.02)}
+.intro ul{margin:0;padding:0 16px 0 0;line-height:1.7}
+.intro ul li{margin-bottom:1px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4px 6px}
+.card{border:1px solid var(--line);border-radius:7px;background:#fff;padding:4px 9px;box-shadow:0 1px 1px rgba(0,0,0,.02);break-inside:avoid;page-break-inside:avoid}
+
+.contact{min-height:40px;text-align:right}
+.contact strong{display:block;font-weight:800;margin-bottom:0;font-size:11.5px}
+.contact .value{font-size:11.5px;color:#3c424a;direction:ltr;text-align:right;line-height:1.4}
 .contact .fa-value{direction:rtl}
-.job{padding:5px 9px;margin-bottom:5px}
-.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.job-title{font-size:13px;font-weight:800;color:var(--blue)}
-.job-date{font-size:11px;color:#8b939c;direction:rtl;white-space:nowrap}
-.job-desc{font-size:11px;color:#555d66;margin-top:2px;line-height:1.55}
-.job-desc ul{margin:3px 0 0;padding:0 14px 0 0}
-.job-desc li{margin-bottom:1px}
-.job-desc strong,.intro strong{color:var(--blue);font-weight:800}
-.info-card{min-height:auto;text-align:right;padding:7px 10px}
-.info-card strong{display:block;font-size:12.5px;margin-bottom:2px}
-.info-card div{font-size:11px;color:#626a73}
-.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 7px}
-.skill-card{padding:5px 8px;min-height:auto}
-.skill-card h3{font-size:12.5px;margin:0 0 3px;font-weight:800}
+
+.lead{font-size:12px;color:#3c424a;direction:ltr;text-align:right;margin-top:4px;line-height:1.6}
+.chain{font-family:Arial,sans-serif;direction:ltr;text-align:left;font-size:11px;color:#4a5361;background:var(--pill);border:1px solid #dfe8f1;border-radius:6px;padding:4px 9px;margin-top:4px;line-height:1.6;word-break:break-word}
+
+.job{padding:5px 9px;margin-bottom:3px}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.job-title{font-size:13px;font-weight:800;color:var(--blue);line-height:1.3}
+.job-sub{font-size:10.5px;color:#7d8792;direction:ltr;text-align:right;margin-top:0;line-height:1.3}
+.job-date{font-size:11px;color:#8b939c;direction:ltr;white-space:nowrap}
+.job ul{margin:3px 0 0;padding:0 15px 0 0;font-size:11px;color:#555d66;line-height:1.6}
+.job ul li{margin-bottom:0}
+.achv{margin-top:3px;font-size:11px;color:#555d66;line-height:1.55;border-top:1px dashed var(--line);padding-top:3px}
+.achv strong{color:var(--blue);font-weight:800}
+
+.value-box{border:1px solid var(--line);border-radius:7px;background:linear-gradient(#fff,#fbfcfd);padding:6px 10px;text-align:center;box-shadow:0 1px 1px rgba(0,0,0,.02)}
+.value-quote{font-size:13.5px;font-weight:800;color:var(--blue);margin:0 0 3px}
+.value-note{font-size:11.5px;color:#4a5361;margin:0 0 5px}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 6px;text-align:right}
+.value-item{border:1px solid var(--line);border-radius:7px;background:#fff;padding:4px 9px}
+.value-item .num{font-family:Arial,sans-serif;direction:ltr;font-weight:800;color:var(--blue);font-size:11px}
+.value-item .en{font-family:Arial,sans-serif;direction:ltr;font-weight:800;font-size:11.5px;margin:0 0 1px;line-height:1.3}
+.value-item .fa{font-size:11px;color:#626a73;line-height:1.5}
+
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 6px}
+.skill-card{padding:4px 8px}
+.skill-card h3{font-size:12px;margin:0 0 3px;font-weight:800;line-height:1.3}
 .pills{display:flex;flex-wrap:wrap;gap:3px 4px;justify-content:flex-start;direction:ltr}
-.pill{border:1px solid #dfe8f1;background:var(--pill);border-radius:999px;padding:1px 7px;color:#6e88a4;font-size:10px;line-height:1.4;white-space:nowrap}
-.comp-block{margin-bottom:6px}
-.comp-block h3{font-size:12.5px;margin:0 0 3px;font-weight:800;color:var(--blue)}
-.comp-block ul{margin:0;padding:0 14px 0 0;font-size:11px;line-height:1.5}
-.comp-block li{margin-bottom:1px}
-.footer{text-align:center;color:#a0a7af;font-size:9px;margin-top:8px}
-@media screen and (max-width:900px){.resume{width:100%}.page{width:100%;min-height:auto;padding:24px 16px}.grid2,.skills-grid{grid-template-columns:1fr}.page{overflow:visible}.top{gap:12px}.top .en-title{font-size:10px}h1{font-size:22px}}
-.pdf-button{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:9999;background:var(--blue);color:#fff;border:none;border-radius:10px;padding:11px 22px;font-size:14px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;font-family:Vazirmatn,Tahoma,Arial,sans-serif;transition:all .2s}
-.pdf-button:hover{filter:brightness(.93);transform:translateX(-50%) translateY(-2px)}
-.pdf-button:active{transform:translateX(-50%) scale(.98)}
+.pill{border:1px solid #dfe8f1;background:var(--pill);border-radius:999px;padding:0 7px;color:#6e88a4;font-size:10px;line-height:1.45;white-space:nowrap}
+.skill-card p{font-size:11px;color:#626a73;margin:3px 0 0;line-height:1.55}
+.full{grid-column:1/-1}
+
+.footer{text-align:center;color:#a0a7af;font-size:9px;margin-top:6px}
+
+@media screen and (max-width:900px){
+  .resume{width:100%}
+  .page{width:100%;min-height:auto;padding:22px 16px}
+  .grid2,.skills-grid,.value-grid{grid-template-columns:1fr}
+  .top{gap:10px;flex-direction:column;align-items:flex-start}
+  .top .en-title{font-size:10px;max-width:100%}
+  h1{font-size:21px}
+  .full{grid-column:auto}
+}
+
+.pdf-button{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;
+  background:var(--blue);color:#fff;text-decoration:none;border:none;cursor:pointer;
+  border-radius:10px;padding:9px 17px;font-size:13px;font-weight:800;
+  box-shadow:0 4px 14px rgba(0,0,0,.14);font-family:inherit
+}
+.pdf-button:hover{filter:brightness(.95)}
 .pdf-button:disabled{opacity:.7;cursor:wait}
+
 @media print{
- .pdf-button{display:none!important}
- @page{size:A4;margin:0}
- body{print-color-adjust:exact;-webkit-print-color-adjust:exact}
- .resume{width:210mm}
- .page{width:210mm;height:297mm;min-height:297mm;padding:10mm 4mm 9mm}
+  .pdf-button{display:none!important}
+  @page{size:A4;margin:0}
+  body{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .resume{width:210mm}
+  .page{width:210mm;min-height:297mm;padding:8mm 4mm 7mm}
 }
 </style>
 </head>
 <body>
-<button class="pdf-button" id="pdfBtn" onclick="downloadPDF()">دانلود PDF رزومه</button>
+<button id="pdfBtn" class="pdf-button" type="button">دانلود PDF رزومه</button>
+<main class="resume">
 
-<main class="resume" id="resume">
-
-<!-- PAGE 1 -->
+<!-- ================= PAGE 1 ================= -->
 <section class="page page1">
+<p class="bism">بنام خدا</p>
 <header class="top">
-  <div class="en-title">Senior Business Process Automation, BPMS &amp; Enterprise Integration Specialist<br>BPA | BPM | BPMS | BPMN | APQC | ERP | API | System Integration | Process Architecture</div>
-  <div class="identity">
-    <h1>پویان علیزاده</h1>
-    <p class="subtitle">کارشناس ارشد توسعه، معماری و اتوماسیون(خوکارسازی) فرآیندها</p>
-  </div>
+  <div class="en-title">BPA | BPM | BPMS | BPMN | APQC | ERP | API | System Integration | Process Architecture</div>
+  <div class="identity"><h1>پویان علیزاده</h1><p class="subtitle">کارشناس ارشد توسعه، معماری و اتوماسیون(خوکارسازی) فرآیندها</p></div>
 </header>
 
 <section class="section">
-  <h2 class="section-title"><span>معرفی</span></h2>
+  <h2 class="section-title"><span>1- معرفی</span></h2>
   <div class="intro">
-    <strong>بنام خدا</strong><br>
-    <strong>رزومه پویان علیزاده</strong><br><br>
-    پویان علیزاده<br>
-    کارشناس ارشد توسعه، معماری و اتوماسیون(خوکارسازی) فرآیندها<br>
-    Senior Business Process Automation, BPMS &amp; Enterprise Integration Specialist<br>
-    BPA | BPM | BPMS | BPMN | APQC | ERP | API | System Integration | Process Architecture<br>
-    تهران، ایران
+    <div><strong>Senior Business Process Automation, BPMS &amp; Enterprise Integration Specialist</strong></div>
+    <div class="lead">BPA | BPM | BPMS | BPMN | APQC | ERP | API | System Integration | Process Architecture</div>
   </div>
 </section>
 
 <section class="section">
   <h2 class="section-title"><span>راه‌های ارتباطی</span></h2>
   <div class="grid2">
-    <div class="card contact"><strong>ایمیل</strong><div class="value">pouyan9913@gmail.com</div></div>
-    <div class="card contact"><strong>موبایل</strong><div class="value">09367801262</div></div>
     <div class="card contact"><strong>محل زندگی</strong><div class="value fa-value">تهران، ایران</div></div>
+    <div class="card contact"><strong>موبایل</strong><div class="value">09367801262</div></div>
+    <div class="card contact"><strong>ایمیل</strong><div class="value">pouyan9913@gmail.com</div></div>
     <div class="card contact"><strong>GitHub</strong><div class="value">github.com/pouyan9913</div></div>
   </div>
 </section>
 
 <section class="section">
-  <h2 class="section-title"><span>PROFESSIONAL PROFILE</span></h2>
+  <h2 class="section-title"><span>2- PROFESSIONAL PROFILE</span></h2>
   <div class="intro">
     <ul>
       <li>متخصص Business Process Automation و Enterprise Application Integration با حدود ۱۰ سال تجربه حرفه‌ای و پروژه‌ای در حوزه توسعه نرم‌افزارهای سازمانی، تحلیل و پیاده‌سازی فرآیندهای کسب‌وکار، ERP، Workflow، BPMS، API Development و یکپارچه‌سازی سامانه‌های سازمانی.</li>
@@ -112,349 +137,381 @@ h1{font-size:24px;line-height:1.15;margin:0 0 3px;font-weight:800}
       <li>توانمند در تحلیل فرآیندهای AS-IS، شناسایی گلوگاه‌ها و فعالیت‌های غیرارزش‌آفرین، طراحی TO-BE، مدل‌سازی فرآیند، تعریف Business Rules، طراحی Workflow، تبدیل فرآیند به راهکار نرم‌افزاری و اتصال راهکار جدید به سامانه‌های موجود.</li>
       <li>آشنا با چارچوب‌های مرجع و رویکردهای APQC Process Classification Framework، BPMN 2.0، ISO Process Approach، Business Process Management و Process Architecture و توانمند در استفاده از این رویکردها برای طبقه‌بندی، تحلیل، مستندسازی و بهبود فرآیندهای سازمانی.</li>
       <li>دارای تجربه عملی در API Development، REST/Web API، ERP Integration، Database Integration، System-to-System Integration، Background Processing و Enterprise Application Development.</li>
-      <li>توانمند در برقراری ارتباط میان:<br>Business Process → BPMN → BPMS → ERP → API → Application → Database → Integration → Monitoring<br>و تبدیل نیازهای فرآیندی سازمان به راهکارهای نرم‌افزاری قابل اجرا.</li>
     </ul>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title"><span>CORE VALUE PROPOSITION</span></h2>
-  <div class="intro">
-    «تبدیل فرآیندهای سازمانی به راهکارهای دیجیتال یکپارچه»<br>
-    توانمندی اصلی در نقطه اتصال چهار حوزه قرار دارد:<br>
-    <strong>1-PROCESS</strong> تحلیل، معماری، مدل‌سازی و بهبود فرآیند<br>
-    <strong>2-AUTOMATION</strong> BPMS، Workflow، Business Rules و Process Automation<br>
-    <strong>3- APPLICATION</strong> ERP، سامانه‌های سازمانی و Business Applications<br>
-    <strong>4- INTEGRATION</strong> API، سرویس‌ها، Data Exchange و اتصال سامانه‌ها
+    <div style="margin-top:4px">توانمند در برقراری ارتباط میان:</div>
+    <div class="chain">Business Process → BPMN → BPMS → ERP → API → Application → Database → Integration → Monitoring</div>
+    <div style="margin-top:4px">و تبدیل نیازهای فرآیندی سازمان به راهکارهای نرم‌افزاری قابل اجرا.</div>
   </div>
 </section>
 </section>
 
-<!-- PAGE 2 -->
+<!-- ================= PAGE 2 ================= -->
 <section class="page page2">
 <header class="top">
-  <div class="en-title">POUYAN ALIZADEH — CORE COMPETENCIES</div>
-  <div class="identity"><h1 style="font-size:20px">مهارت‌ها و توانمندی‌های اصلی</h1><p class="subtitle">Business Process · Automation · Application · Integration</p></div>
+  <div class="en-title">CORE VALUE PROPOSITION &amp; CORE COMPETENCIES</div>
+  <div class="identity"><h1 style="font-size:21px">ارزش پیشنهادی و شایستگی‌های کلیدی</h1><p class="subtitle">POUYAN ALIZADEH</p></div>
 </header>
 
 <section class="section">
-  <h2 class="section-title"><span>CORE COMPETENCIES</span></h2>
-  
-  <div class="comp-block">
-    <h3>4-1- Business Process Management</h3>
-    <ul>
-      <li>Business Process Analysis</li>
-      <li>Business Process Management</li>
-      <li>Business Process Automation</li>
-      <li>Process Improvement</li>
-      <li>Process Optimization</li>
-      <li>Process Documentation</li>
-      <li>Process Governance</li>
-      <li>Workflow Analysis</li>
-      <li>Workflow Design</li>
-      <li>Business Rule Analysis</li>
-      <li>Process Performance Analysis</li>
-      <li>Process KPI Definition</li>
-      <li>Process Bottleneck Analysis</li>
-      <li>Process-to-Software Transformation</li>
-    </ul>
+  <h2 class="section-title"><span>3- CORE VALUE PROPOSITION</span></h2>
+  <div class="value-box">
+    <p class="value-quote">«تبدیل فرآیندهای سازمانی به راهکارهای دیجیتال یکپارچه»</p>
+    <p class="value-note">توانمندی اصلی در نقطه اتصال چهار حوزه قرار دارد:</p>
+    <div class="value-grid">
+      <div class="value-item"><div class="num">1</div><div class="en">PROCESS</div><div class="fa">تحلیل، معماری، مدل‌سازی و بهبود فرآیند</div></div>
+      <div class="value-item"><div class="num">2</div><div class="en">AUTOMATION</div><div class="fa">BPMS، Workflow، Business Rules و Process Automation</div></div>
+      <div class="value-item"><div class="num">3</div><div class="en">APPLICATION</div><div class="fa">ERP، سامانه‌های سازمانی و Business Applications</div></div>
+      <div class="value-item"><div class="num">4</div><div class="en">INTEGRATION</div><div class="fa">API، سرویس‌ها، Data Exchange و اتصال سامانه‌ها</div></div>
+    </div>
   </div>
+</section>
 
-  <div class="comp-block">
-    <h3>4-2- Process Architecture</h3>
-    <ul>
-      <li>Process Landscape</li>
-      <li>Process Architecture</li>
-      <li>Process Hierarchy</li>
-      <li>Process Classification</li>
-      <li>Process Mapping</li>
-    </ul>
-  </div>
+<section class="section">
+  <h2 class="section-title"><span>4- CORE COMPETENCIES</span></h2>
+  <div class="skills-grid">
 
-  <div class="comp-block">
-    <h3>4-3- BPMN &amp; Process Modeling</h3>
-    <ul>
-      <li>BPMN 2.0</li>
-      <li>AS-IS Modeling</li>
-      <li>TO-BE Modeling</li>
-      <li>Process Flow Modeling</li>
-    </ul>
-  </div>
+    <div class="card skill-card">
+      <h3>4-1- Business Process Management</h3>
+      <div class="pills">
+        <span class="pill">Business Process Analysis</span>
+        <span class="pill">Business Process Management</span>
+        <span class="pill">Business Process Automation</span>
+        <span class="pill">Process Improvement</span>
+        <span class="pill">Process Optimization</span>
+        <span class="pill">Process Documentation</span>
+        <span class="pill">Process Governance</span>
+        <span class="pill">Workflow Analysis</span>
+        <span class="pill">Workflow Design</span>
+        <span class="pill">Business Rule Analysis</span>
+        <span class="pill">Process Performance Analysis</span>
+        <span class="pill">Process KPI Definition</span>
+        <span class="pill">Process Bottleneck Analysis</span>
+        <span class="pill">Process-to-Software Transformation</span>
+      </div>
+    </div>
 
-  <div class="comp-block">
-    <h3>4-4- APQC &amp; Process Frameworks</h3>
-    <div style="font-size:11px;margin-bottom:3px">آشنایی و توانایی استفاده از:</div>
-    <ul>
-      <li>APQC Process Classification Framework</li>
-      <li>APQC Industry-Specific Process Frameworks</li>
-      <li>APQC Upstream Petroleum PCF</li>
-      <li>Process Classification</li>
-      <li>Process Benchmarking</li>
-      <li>Process Architecture</li>
-      <li>Process Performance Management</li>
-      <li>Process Mapping</li>
-      <li>Process Standardization</li>
-    </ul>
-    <div style="font-size:11px;margin-top:3px">توانایی استفاده از APQC به‌عنوان Reference Framework برای طراحی Process Landscape و نه جایگزین معماری واقعی فرآیندهای سازمان.<br>
-    در حوزه نفت و گاز، APQC نسخه Upstream Petroleum را به‌طور اختصاصی برای سازمان‌های بالادستی نفت و گاز توسعه داده و حوزه‌هایی مانند توسعه دارایی‌های هیدروکربوری، حفاری و بهره‌برداری را پوشش می‌دهد.</div>
-  </div>
+    <div class="card skill-card">
+      <h3>4-2- Process Architecture</h3>
+      <div class="pills">
+        <span class="pill">Process Landscape</span>
+        <span class="pill">Process Architecture</span>
+        <span class="pill">Process Hierarchy</span>
+        <span class="pill">Process Classification</span>
+        <span class="pill">Process Mapping</span>
+      </div>
+    </div>
 
-  <div class="comp-block">
-    <h3>4-5- ISO &amp; Process Approach</h3>
-    <div style="font-size:11px;margin-bottom:3px">آشنایی با رویکرد فرآیندی در سیستم‌های مدیریتی و مفاهیم:</div>
-    <ul>
-      <li>Process Approach</li>
-      <li>Process Interaction</li>
-      <li>Process Inputs / Outputs</li>
-      <li>Process Owner</li>
-      <li>Process Controls</li>
-      <li>Process Risks</li>
-      <li>Process Objectives</li>
-      <li>Process Performance</li>
-      <li>Continual Improvement</li>
-      <li>PDCA</li>
-      <li>Documented Information</li>
-      <li>Process Monitoring</li>
-    </ul>
+    <div class="card skill-card">
+      <h3>4-3- BPMN &amp; Process Modeling</h3>
+      <div class="pills">
+        <span class="pill">BPMN 2.0</span>
+        <span class="pill">AS-IS Modeling</span>
+        <span class="pill">TO-BE Modeling</span>
+        <span class="pill">Process Flow Modeling</span>
+      </div>
+    </div>
+
+    <div class="card skill-card">
+      <h3>4-4- APQC &amp; Process Frameworks</h3>
+      <div style="font-size:11px;color:#626a73;margin-bottom:3px">آشنایی و توانایی استفاده از:</div>
+      <div class="pills">
+        <span class="pill">APQC Process Classification Framework</span>
+        <span class="pill">APQC Industry-Specific Process Frameworks</span>
+        <span class="pill">APQC Upstream Petroleum PCF</span>
+        <span class="pill">Process Classification</span>
+        <span class="pill">Process Benchmarking</span>
+        <span class="pill">Process Architecture</span>
+        <span class="pill">Process Performance Management</span>
+        <span class="pill">Process Mapping</span>
+        <span class="pill">Process Standardization</span>
+      </div>
+      <p>توانایی استفاده از APQC به‌عنوان Reference Framework برای طراحی Process Landscape و نه جایگزین معماری واقعی فرآیندهای سازمان.</p>
+      <p>در حوزه نفت و گاز، APQC نسخه Upstream Petroleum را به‌طور اختصاصی برای سازمان‌های بالادستی نفت و گاز توسعه داده و حوزه‌هایی مانند توسعه دارایی‌های هیدروکربوری، حفاری و بهره‌برداری را پوشش می‌دهد.</p>
+    </div>
+
   </div>
 </section>
 </section>
 
-<!-- PAGE 3 -->
+<!-- ================= PAGE 3 ================= -->
 <section class="page page3">
 <header class="top">
-  <div class="en-title">POUYAN ALIZADEH — COMPETENCIES &amp; EXPERIENCE</div>
-  <div class="identity"><h1 style="font-size:20px">توانمندی‌ها و سوابق حرفه‌ای</h1></div>
+  <div class="en-title">CORE COMPETENCIES (CONTINUED)</div>
+  <div class="identity"><h1 style="font-size:21px">شایستگی‌های کلیدی</h1><p class="subtitle">POUYAN ALIZADEH</p></div>
 </header>
 
 <section class="section">
-  <div class="comp-block">
-    <h3>4-6- BPMS &amp; Workflow Automation</h3>
-    <div style="font-size:11px">(BPMS Lifecycle: Discover → Analyze → Model → Improve → Automate → Integrate → Execute → Monitor → Improve)</div>
-    <ul>
-      <li>BPMS Architecture (Bizagi Modeler &amp; Bizagi Studio)</li>
-    </ul>
-  </div>
+  <div class="skills-grid">
 
-  <div class="comp-block">
-    <h3>4-7- ERP &amp; Enterprise Applications</h3>
-    <ul>
-      <li>ERP Systems</li>
-      <li>ERP Business Processes</li>
-      <li>ERP Integration</li>
-      <li>Business Applications</li>
-      <li>Administrative Applications</li>
-      <li>Financial Applications</li>
-      <li>Organizational Applications</li>
-      <li>Master Data</li>
-      <li>Transactional Data</li>
-      <li>Business Rules</li>
-      <li>ERP APIs</li>
-      <li>ERP/System Integration</li>
-      <li>Business Application Development</li>
-    </ul>
-    <div style="font-size:11px;margin-top:2px">توانایی تحلیل ارتباط میان فرآیندهای سازمانی و قابلیت‌های ERP و شناسایی نقاطی که نیازمند توسعه، Integration یا Automation هستند.</div>
-  </div>
-
-  <div class="comp-block">
-    <h3>4-8- Enterprise Integration (Integration Architecture)</h3>
-    <div style="font-size:11px;margin-bottom:2px">توانایی تحلیل و طراحی ارتباط میان:<br>ERP ↔ BPMS ↔ Business Applications ↔ Databases ↔ External Systems ↔ APIs<br>با استفاده از:</div>
-    <ul>
-      <li>REST API</li>
-      <li>Web API</li>
-      <li>SOAP</li>
-      <li>Web Services</li>
-      <li>JSON</li>
-      <li>XML</li>
-      <li>Data Exchange</li>
-      <li>Data Synchronization</li>
-      <li>Service Integration</li>
-      <li>Application Integration</li>
-      <li>Database Integration</li>
-      <li>Scheduled Integration</li>
-      <li>Background Processing</li>
-      <li>Event-Based Integration</li>
-    </ul>
-  </div>
-
-  <div class="comp-block">
-    <h3>4-9- API Development</h3>
-    <ul>
-      <li>RESTful API</li>
-      <li>ASP.NET Core Web API</li>
-      <li>API Design</li>
-      <li>API Consumption</li>
-      <li>API Integration</li>
-      <li>Authentication / Authorization</li>
-      <li>Data Exchange</li>
-      <li>JSON / XML</li>
-      <li>Service-to-Service Communication</li>
-      <li>Backend Services</li>
-      <li>Integration Services</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="section-title"><span>PROFESSIONAL EXPERIENCE</span></h2>
-  
-  <div class="card job">
-    <div class="job-head">
-      <div class="job-title">گروه مینو — Software Engineer | Business Process &amp; Integration Developer</div>
-      <div class="job-date">08/1403 – Present</div>
+    <div class="card skill-card">
+      <h3>4-5- ISO &amp; Process Approach</h3>
+      <div style="font-size:11px;color:#626a73;margin-bottom:3px">آشنایی با رویکرد فرآیندی در سیستم‌های مدیریتی و مفاهیم:</div>
+      <div class="pills">
+        <span class="pill">Process Approach</span>
+        <span class="pill">Process Interaction</span>
+        <span class="pill">Process Inputs / Outputs</span>
+        <span class="pill">Process Owner</span>
+        <span class="pill">Process Controls</span>
+        <span class="pill">Process Risks</span>
+        <span class="pill">Process Objectives</span>
+        <span class="pill">Process Performance</span>
+        <span class="pill">Continual Improvement</span>
+        <span class="pill">PDCA</span>
+        <span class="pill">Documented Information</span>
+        <span class="pill">Process Monitoring</span>
+      </div>
     </div>
-    <div class="job-desc">
-      <ul>
-        <li>توسعه و نگهداری سامانه‌های سازمانی و Business Applications.</li>
-        <li>تحلیل نیازهای کسب‌وکار و تبدیل آنها به قابلیت‌های نرم‌افزاری.</li>
-        <li>تحلیل و پیاده‌سازی فرآیندهای کاری و گردش اطلاعات در سامانه‌های سازمانی.</li>
-        <li>طراحی و توسعه API و سرویس‌های موردنیاز برای Integration.</li>
-        <li>طراحی ارتباط بین سامانه‌های مختلف و ایجاد سرویس‌های تبادل اطلاعات.</li>
-        <li>توسعه و بهبود منطق کسب‌وکار و Business Rules.</li>
-        <li>مشارکت در توسعه قابلیت‌های ERP و سامانه‌های تجاری.</li>
-        <li>طراحی سرویس‌های Backend برای پشتیبانی از فرآیندهای سازمانی.</li>
-        <li>توسعه فرآیندهای خودکار برای کاهش فعالیت‌های دستی و افزایش سرعت گردش اطلاعات.</li>
-        <li>طراحی و پیاده‌سازی پردازش‌های Background و Jobهای زمان‌بندی‌شده.</li>
-        <li>کار با SQL Server و توسعه Stored Procedure، Function، View و Queryهای موردنیاز.</li>
-        <li>تحلیل خطاها و مشکلات فرآیندی/نرم‌افزاری و ارائه راهکارهای اصلاحی.</li>
-        <li>مشارکت در Integration بین سامانه‌ها و هماهنگ‌سازی داده‌ها.</li>
-      </ul>
-      <strong>دستاورد حرفه‌ای:</strong> ایجاد ارتباط میان فرآیند کسب‌وکار، Application و Integration Layer و تبدیل نیازهای سازمانی به قابلیت‌های نرم‌افزاری قابل اجرا
+
+    <div class="card skill-card">
+      <h3>4-6- BPMS &amp; Workflow Automation</h3>
+      <div style="font-size:11px;color:#626a73;margin-bottom:3px">BPMS Lifecycle: Discover → Analyze → Model → Improve → Automate → Integrate → Execute → Monitor → Improve</div>
+      <div class="pills">
+        <span class="pill">BPMS Architecture (Bizagi Modeler &amp; Bizagi Studio)</span>
+      </div>
     </div>
+
+    <div class="card skill-card full">
+      <h3>4-7- ERP &amp; Enterprise Applications</h3>
+      <div class="pills">
+        <span class="pill">ERP Systems</span>
+        <span class="pill">ERP Business Processes</span>
+        <span class="pill">ERP Integration</span>
+        <span class="pill">Business Applications</span>
+        <span class="pill">Administrative Applications</span>
+        <span class="pill">Financial Applications</span>
+        <span class="pill">Organizational Applications</span>
+        <span class="pill">Master Data</span>
+        <span class="pill">Transactional Data</span>
+        <span class="pill">Business Rules</span>
+        <span class="pill">ERP APIs</span>
+        <span class="pill">ERP/System Integration</span>
+        <span class="pill">Business Application Development</span>
+      </div>
+      <p>توانایی تحلیل ارتباط میان فرآیندهای سازمانی و قابلیت‌های ERP و شناسایی نقاطی که نیازمند توسعه، Integration یا Automation هستند.</p>
+    </div>
+
+    <div class="card skill-card full">
+      <h3>4-8- Enterprise Integration (Integration Architecture)</h3>
+      <div style="font-size:11px;color:#626a73;margin:2px 0 3px">توانایی تحلیل و طراحی ارتباط میان:</div>
+      <div class="chain">ERP ↔ BPMS ↔ Business Applications ↔ Databases ↔ External Systems ↔ APIs</div>
+      <div style="font-size:11px;color:#626a73;margin:4px 0 3px">با استفاده از:</div>
+      <div class="pills">
+        <span class="pill">REST API</span>
+        <span class="pill">Web API</span>
+        <span class="pill">SOAP</span>
+        <span class="pill">Web Services</span>
+        <span class="pill">JSON</span>
+        <span class="pill">XML</span>
+        <span class="pill">Data Exchange</span>
+        <span class="pill">Data Synchronization</span>
+        <span class="pill">Service Integration</span>
+        <span class="pill">Application Integration</span>
+        <span class="pill">Database Integration</span>
+        <span class="pill">Scheduled Integration</span>
+        <span class="pill">Background Processing</span>
+        <span class="pill">Event-Based Integration</span>
+      </div>
+    </div>
+
+    <div class="card skill-card full">
+      <h3>4-9- API Development</h3>
+      <div class="pills">
+        <span class="pill">RESTful API</span>
+        <span class="pill">ASP.NET Core Web API</span>
+        <span class="pill">API Design</span>
+        <span class="pill">API Consumption</span>
+        <span class="pill">API Integration</span>
+        <span class="pill">Authentication / Authorization</span>
+        <span class="pill">Data Exchange</span>
+        <span class="pill">JSON / XML</span>
+        <span class="pill">Service-to-Service Communication</span>
+        <span class="pill">Backend Services</span>
+        <span class="pill">Integration Services</span>
+      </div>
+    </div>
+
   </div>
 </section>
 </section>
 
-<!-- PAGE 4 -->
+<!-- ================= PAGE 4 ================= -->
 <section class="page page4">
 <header class="top">
-  <div class="en-title">POUYAN ALIZADEH — PROFESSIONAL EXPERIENCE</div>
-  <div class="identity"><h1 style="font-size:20px">سوابق حرفه‌ای (ادامه)</h1></div>
+  <div class="en-title">PROFESSIONAL EXPERIENCE</div>
+  <div class="identity"><h1 style="font-size:21px">سوابق حرفه‌ای</h1><p class="subtitle">POUYAN ALIZADEH</p></div>
 </header>
 
 <section class="section">
+  <h2 class="section-title"><span>5- PROFESSIONAL EXPERIENCE</span></h2>
+
   <div class="card job">
     <div class="job-head">
-      <div class="job-title">شرکت نرم‌افزاری آریا داده — Software Developer | Business Application Developer</div>
+      <div>
+        <div class="job-title">5-1- گروه مینو</div>
+        <div class="job-sub">Software Engineer | Business Process &amp; Integration Developer</div>
+      </div>
+      <div class="job-date">08/1403 – Present</div>
+    </div>
+    <ul>
+      <li>توسعه و نگهداری سامانه‌های سازمانی و Business Applications.</li>
+      <li>تحلیل نیازهای کسب‌وکار و تبدیل آنها به قابلیت‌های نرم‌افزاری.</li>
+      <li>تحلیل و پیاده‌سازی فرآیندهای کاری و گردش اطلاعات در سامانه‌های سازمانی.</li>
+      <li>طراحی و توسعه API و سرویس‌های موردنیاز برای Integration.</li>
+      <li>طراحی ارتباط بین سامانه‌های مختلف و ایجاد سرویس‌های تبادل اطلاعات.</li>
+      <li>توسعه و بهبود منطق کسب‌وکار و Business Rules.</li>
+      <li>مشارکت در توسعه قابلیت‌های ERP و سامانه‌های تجاری.</li>
+      <li>طراحی سرویس‌های Backend برای پشتیبانی از فرآیندهای سازمانی.</li>
+      <li>توسعه فرآیندهای خودکار برای کاهش فعالیت‌های دستی و افزایش سرعت گردش اطلاعات.</li>
+      <li>طراحی و پیاده‌سازی پردازش‌های Background و Jobهای زمان‌بندی‌شده.</li>
+      <li>کار با SQL Server و توسعه Stored Procedure، Function، View و Queryهای موردنیاز.</li>
+      <li>تحلیل خطاها و مشکلات فرآیندی/نرم‌افزاری و ارائه راهکارهای اصلاحی.</li>
+      <li>مشارکت در Integration بین سامانه‌ها و هماهنگ‌سازی داده‌ها.</li>
+    </ul>
+    <div class="achv"><strong>دستاورد حرفه‌ای :</strong> ایجاد ارتباط میان فرآیند کسب‌وکار، Application و Integration Layer و تبدیل نیازهای سازمانی به قابلیت‌های نرم‌افزاری قابل اجرا</div>
+  </div>
+
+  <div class="card job">
+    <div class="job-head">
+      <div>
+        <div class="job-title">5-2- شرکت نرم‌افزاری آریا داده</div>
+        <div class="job-sub">Software Developer | Business Application Developer</div>
+      </div>
       <div class="job-date">02/1403 – 08/1403</div>
     </div>
-    <div class="job-desc">
-      <ul>
-        <li>توسعه و پشتیبانی سامانه‌های سازمانی.</li>
-        <li>تحلیل نیازمندی‌های کاربران و فرآیندهای کاری.</li>
-        <li>پیاده‌سازی Business Logic و فرآیندهای اداری.</li>
-        <li>توسعه API و سرویس‌های Backend.</li>
-        <li>توسعه قابلیت‌های موردنیاز Business Applications.</li>
-        <li>کار با پایگاه داده و پردازش اطلاعات.</li>
-        <li>رفع خطاهای نرم‌افزاری و بهبود عملکرد سامانه‌ها.</li>
-        <li>همکاری با کاربران و تیم‌های فنی برای تبدیل نیازمندی‌ها به راهکار نرم‌افزاری.</li>
-      </ul>
-    </div>
+    <ul>
+      <li>توسعه و پشتیبانی سامانه‌های سازمانی.</li>
+      <li>تحلیل نیازمندی‌های کاربران و فرآیندهای کاری.</li>
+      <li>پیاده‌سازی Business Logic و فرآیندهای اداری.</li>
+      <li>توسعه API و سرویس‌های Backend.</li>
+      <li>توسعه قابلیت‌های موردنیاز Business Applications.</li>
+      <li>کار با پایگاه داده و پردازش اطلاعات.</li>
+      <li>رفع خطاهای نرم‌افزاری و بهبود عملکرد سامانه‌ها.</li>
+      <li>همکاری با کاربران و تیم‌های فنی برای تبدیل نیازمندی‌ها به راهکار نرم‌افزاری.</li>
+    </ul>
   </div>
 
-  <div class="card job">
-    <div class="job-head">
-      <div class="job-title">PROJECT-BASED EXPERIENCE — Business Process Automation &amp; Enterprise Integration</div>
-      <div class="job-date">1398 – 1401</div>
-    </div>
-    <div class="job-desc">
-      <ul>
-        <li>مشارکت در پروژه‌های توسعه سامانه‌های سازمانی و Business Applications</li>
-        <li>تحلیل فرآیندهای کاری و تبدیل نیازهای کسب‌وکار به راهکارهای نرم‌افزاری</li>
-        <li>طراحی Workflow و گردش کار</li>
-        <li>تحلیل AS-IS و طراحی TO-BE برای فرآیندهای منتخب</li>
-        <li>توسعه API و سرویس‌های Integration</li>
-        <li>طراحی ارتباط میان سامانه‌های مختلف</li>
-        <li>تبادل اطلاعات میان Applicationها و Databaseها</li>
-        <li>توسعه قابلیت‌های ERP و نرم‌افزارهای تجاری</li>
-        <li>پیاده‌سازی منطق کسب‌وکار</li>
-        <li>مستندسازی فرآیندها و نیازمندی‌های نرم‌افزاری</li>
-        <li>مشارکت در بهبود و اتوماسیون فرآیندهای دستی</li>
-        <li>تحلیل مسائل سازمانی از منظر فرآیند، اطلاعات و سیستم</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card job">
-    <div class="job-head">
-      <div class="job-title">معارف جنگ شهید صیاد شیرازی — Software Developer | Organizational Systems Development</div>
-      <div class="job-date">1401 – 1403</div>
-    </div>
-    <div class="job-desc">
-      <ul>
-        <li>توسعه و نگهداری نرم‌افزارهای سازمانی</li>
-        <li>تحلیل نیازهای کاربران و سازمان</li>
-        <li>توسعه Backend و سرویس‌های نرم‌افزاری</li>
-        <li>طراحی و توسعه قابلیت‌های موردنیاز سامانه‌ها</li>
-        <li>کار با Database و پردازش اطلاعات</li>
-        <li>مشارکت در توسعه و بهبود سیستم‌های سازمانی</li>
-        <li>تحلیل مشکلات نرم‌افزاری و ارائه راهکار</li>
-        <li>پشتیبانی و بهبود قابلیت‌های سیستم‌ها</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card job">
-    <div class="job-head">
-      <div class="job-title">مؤسسه خدمات مدیریت و رشد قلمچی — Technical Support | Software &amp; Systems Support</div>
-      <div class="job-date">1396 – 1398</div>
-    </div>
-    <div class="job-desc">
-      <ul>
-        <li>پشتیبانی فنی کاربران و سامانه‌های سازمانی</li>
-        <li>تحلیل مشکلات نرم‌افزاری و سیستمی</li>
-        <li>شناسایی Root Cause مشکلات کاربران</li>
-        <li>همکاری در نگهداری سامانه‌ها</li>
-        <li>ارتباط مستقیم با کاربران و شناخت نیازهای واقعی عملیاتی</li>
-        <li>کسب تجربه در ارتباط میان فرآیندهای سازمانی، کاربران و سیستم‌های نرم‌افزاری</li>
-      </ul>
-    </div>
-  </div>
+</section>
 </section>
 
-<div class="footer">آخرین بروزرسانی رزومه: 1405</div>
+<!-- ================= PAGE 5 ================= -->
+<section class="page page5">
+<header class="top">
+  <div class="en-title">PROFESSIONAL EXPERIENCE (CONTINUED)</div>
+  <div class="identity"><h1 style="font-size:21px">سوابق حرفه‌ای</h1><p class="subtitle">POUYAN ALIZADEH</p></div>
+</header>
+
+<section class="section">
+
+  <div class="card job">
+    <div class="job-head">
+      <div>
+        <div class="job-title">5-3- PROJECT-BASED EXPERIENCE</div>
+        <div class="job-sub">Business Process Automation &amp; Enterprise Integration</div>
+      </div>
+      <div class="job-date">1398 – 1401</div>
+    </div>
+    <ul>
+      <li>مشارکت در پروژه‌های توسعه سامانه‌های سازمانی و Business Applications</li>
+      <li>تحلیل فرآیندهای کاری و تبدیل نیازهای کسب‌وکار به راهکارهای نرم‌افزاری</li>
+      <li>طراحی Workflow و گردش کار</li>
+      <li>تحلیل AS-IS و طراحی TO-BE برای فرآیندهای منتخب</li>
+      <li>توسعه API و سرویس‌های Integration</li>
+      <li>طراحی ارتباط میان سامانه‌های مختلف</li>
+      <li>تبادل اطلاعات میان Applicationها و Databaseها</li>
+      <li>توسعه قابلیت‌های ERP و نرم‌افزارهای تجاری</li>
+      <li>پیاده‌سازی منطق کسب‌وکار</li>
+      <li>مستندسازی فرآیندها و نیازمندی‌های نرم‌افزاری</li>
+      <li>مشارکت در بهبود و اتوماسیون فرآیندهای دستی</li>
+      <li>تحلیل مسائل سازمانی از منظر فرآیند، اطلاعات و سیستم</li>
+    </ul>
+  </div>
+
+  <div class="card job">
+    <div class="job-head">
+      <div>
+        <div class="job-title">5-4- معارف جنگ شهید صیاد شیرازی</div>
+        <div class="job-sub">Software Developer | Organizational Systems Development</div>
+      </div>
+      <div class="job-date">1401 – 1403</div>
+    </div>
+    <ul>
+      <li>توسعه و نگهداری نرم‌افزارهای سازمانی</li>
+      <li>تحلیل نیازهای کاربران و سازمان</li>
+      <li>توسعه Backend و سرویس‌های نرم‌افزاری</li>
+      <li>طراحی و توسعه قابلیت‌های موردنیاز سامانه‌ها</li>
+      <li>کار با Database و پردازش اطلاعات</li>
+      <li>مشارکت در توسعه و بهبود سیستم‌های سازمانی</li>
+      <li>تحلیل مشکلات نرم‌افزاری و ارائه راهکار</li>
+      <li>پشتیبانی و بهبود قابلیت‌های سیستم‌ها</li>
+    </ul>
+  </div>
+
+  <div class="card job">
+    <div class="job-head">
+      <div>
+        <div class="job-title">5-5- مؤسسه خدمات مدیریت و رشد قلم‌چی</div>
+        <div class="job-sub">Technical Support | Software &amp; Systems Support</div>
+      </div>
+      <div class="job-date">1396 – 1398</div>
+    </div>
+    <ul>
+      <li>پشتیبانی فنی کاربران و سامانه‌های سازمانی</li>
+      <li>تحلیل مشکلات نرم‌افزاری و سیستمی</li>
+      <li>شناسایی Root Cause مشکلات کاربران</li>
+      <li>همکاری در نگهداری سامانه‌ها</li>
+      <li>ارتباط مستقیم با کاربران و شناخت نیازهای واقعی عملیاتی</li>
+      <li>کسب تجربه در ارتباط میان فرآیندهای سازمانی، کاربران و سیستم‌های نرم‌افزاری</li>
+    </ul>
+  </div>
+
+</section>
 </section>
 
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-function downloadPDF() {
-  const btn = document.getElementById('pdfBtn');
-  const element = document.getElementById('resume');
-  
-  btn.disabled = true;
-  btn.textContent = 'در حال ساخت PDF...';
+(function(){
+  var btn = document.getElementById('pdfBtn');
+  var originalText = btn.textContent;
 
-  const opt = {
-    margin:       [0, 0, 0, 0],
-    filename:     'Pouyan-Alizadeh-Resume.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { 
-      scale: 2,
-      useCORS: true,
-      letterRendering: true,
-      scrollY: 0
-    },
-    jsPDF:        { 
-      unit: 'mm', 
-      format: 'a4', 
-      orientation: 'portrait',
-      compress: true
-    },
-    pagebreak:    { mode: ['css', 'legacy'], before: '.page' }
-  };
+  btn.addEventListener('click', function(){
+    if (typeof html2pdf === 'undefined') {
+      // fallback: open print dialog (user can "Save as PDF")
+      window.print();
+      return;
+    }
 
-  html2pdf().set(opt).from(element).save().then(() => {
-    btn.disabled = false;
-    btn.textContent = 'دانلود PDF رزومه';
-  }).catch(err => {
-    console.error(err);
-    btn.disabled = false;
-    btn.textContent = 'دانلود PDF رزومه';
-    alert('خطا در ساخت PDF. لطفاً دوباره تلاش کنید.');
+    btn.disabled = true;
+    btn.textContent = 'در حال ساخت PDF...';
+
+    var element = document.querySelector('.resume');
+    var opt = {
+      margin: 0,
+      filename: 'Pouyan-Alizadeh-Resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        scrollY: 0,
+        windowWidth: element.scrollWidth
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(element).save().then(function(){
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }).catch(function(err){
+      console.error(err);
+      btn.disabled = false;
+      btn.textContent = originalText;
+      window.print();
+    });
   });
-}
+})();
 </script>
 </body>
 </html>
